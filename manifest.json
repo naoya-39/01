@@ -1,0 +1,14 @@
+
+{
+  "name": "仕込み販売カウント",
+  "short_name": "仕込みPWA",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4CAF50",
+  "icons": [{
+    "src": "icon.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }]
+}

@@ -2,49 +2,16 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>仕込み販売カウント</title>
-    <link rel="manifest" href="manifest.json">
-    <style>
-        body { font-family: sans-serif; padding: 1em; }
-        input[type="number"], input[type="text"], select { width: 80px; }
-        table { border-collapse: collapse; width: 100%; }
-        th, td { border: 1px solid #ccc; padding: 5px; text-align: center; }
-        .header-inputs { margin-bottom: 1em; }
-        #totalCostDisplay { margin-top: 1em; font-weight: bold; }
-        @media print {
-            button, input, select { display: none !important; }
-            td, th { border: 1px solid #000; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>販売数カウントPWA</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
 </head>
 <body>
-    <h1>仕込み販売カウント</h1>
-    <div class="header-inputs">
-        日付: <input type="date" id="date"><br><br>
-        予約名: <input type="text" id="reservation"><br><br>
-        人数: <input type="number" id="people"><br><br>
-        卓数: <input type="number" id="tables"><br>
-    </div>
-    <table id="menuTable">
-        <thead>
-            <tr>
-                <th>メニュー名</th>
-                <th>単位</th>
-                <th>仕込数</th>
-                <th>残数</th>
-                <th>出数</th>
-                <th>単価</th>
-                <th>合計原価</th>
-            </tr>
-        </thead>
-        <tbody id="menuBody"></tbody>
-    </table>
-    <div id="totalCostDisplay">原価合計: ¥0</div>
-    <br>
-    <button onclick="downloadCSV()">CSV出力</button>
-    <button onclick="window.print()">🖨 印刷</button>
-    <script src="app.js"></script>
+  <h1>販売数カウント</h1>
+  <div id="menu-container"></div>
+  <button onclick="downloadCSV()">CSVをダウンロード</button>
+  <script src="script.js"></script>
 </body>
 </html>
